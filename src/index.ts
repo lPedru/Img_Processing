@@ -342,7 +342,7 @@ window.onload = () => {
     //   });
     // }
   }
-  
+   
   const img = new ImgGenerator('./img/sus.png');
   img.Invert();
   const btn = document.querySelector('#invert');
