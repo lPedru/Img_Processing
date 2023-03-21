@@ -11,6 +11,8 @@ window.onload = function () {
             var context = canvas.getContext('2d');
             var img = new Image();
             img.src = src;
+            img.height = 300;
+            img.width = 300;
             this.img = img;
             this.canvas = canvas;
             this.context = context;
@@ -21,9 +23,9 @@ window.onload = function () {
             this.canvas.addEventListener("mousemove", function (event) { return _this.Pick(event, document.getElementById("hovered-color")); });
             this.canvas.addEventListener("click", function (event) { return _this.Pick(event, document.getElementById("selected-color")); });
             this.img.onload = function () {
-                _this.canvas.width = _this.img.width / 2;
-                _this.canvas.height = _this.img.height / 2;
-                _this.context.drawImage(_this.img, 0, 0, _this.img.width / 2, _this.img.height / 2);
+                _this.canvas.width = _this.img.width;
+                _this.canvas.height = _this.img.height;
+                _this.context.drawImage(_this.img, 0, 0, _this.img.width, _this.img.height);
             };
         };
         ImgGenerator.prototype.Pick = function (event, destination) {
@@ -38,7 +40,7 @@ window.onload = function () {
             return rgba;
         };
         ImgGenerator.prototype.SetOriginal = function () {
-            this.context.drawImage(this.img, 0, 0, this.img.width / 2, this.img.height / 2);
+            this.context.drawImage(this.img, 0, 0, this.img.width, this.img.height);
         };
         ImgGenerator.prototype.Invert = function () {
             var imgData = this.context.getImageData(0, 0, this.canvas.width, this.canvas.height);

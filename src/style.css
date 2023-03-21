@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 1.875rem;
+  margin: 0.3125rem 0 0.3125rem 0;
+  border-radius: 0.9375rem;
+}

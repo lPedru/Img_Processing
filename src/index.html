@@ -1,23 +1,29 @@
 <html>
     <head>
         <title>TS - Basic Concepts</title>
+        <link rel="stylesheet" href="style.css">
         <script src="index.js"></script>
     </head>
     <body>
-        <canvas id="viewport"></canvas>
-        <div id="hovered-color"></div>
-        <div id="selected-color"></div>
-        <button id="invert">Invert Image</button>
-        <button id="grayscale">Grayscale</button>
-        <button id="reset">Reset</button>
-        <!-- <input type="text" id="threshold-val" placeholder="Insira o valor aqui" /> -->
-        <label for="threshold-val" id="threshold-label">127</label>
-        <input type="range" id="threshold-val" name="threshold-val" min="0" max="255">
-        <button id="threshold">Threshold</button>
-        <button id="threshold2">Threshold 2</button>
-        <label for="log-val" id="log-label">127</label>
-        <input type="range" id="log-val" name="log-val" min="0" max="255">
-        <button id="logtransform">Log Transform</button>
-        <button id="invlogtransform">Inverse Log Transform</button>
+        <div class="viewport-container">
+            <canvas id="viewport"></canvas>
+        </div>
+        <div class="buttons">
+            <div class="colors" id="hovered-color"></div>
+            <div class="colors" id="selected-color"></div>
+            <button id="invert">Invert Image</button>
+            <button id="grayscale">Grayscale</button>
+            <button id="reset">Reset</button>
+            <!-- <input type="text" id="threshold-val" placeholder="Insira o valor aqui" /> -->
+            <label for="threshold-val" id="threshold-label">127</label>
+            <input type="range" id="threshold-val" name="threshold-val" min="0" max="255">
+            <button id="threshold">Threshold</button>
+            <button id="threshold2">Threshold 2</button>
+            <label for="log-val" id="log-label">127</label>
+            <input type="range" id="log-val" name="log-val" min="0" max="255">
+            <button id="logtransform">Log Transform</button>
+            <button id="invlogtransform">Inverse Log Transform</button>
+        </div>
+        
     </body>
 </html>

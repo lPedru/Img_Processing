@@ -42,6 +42,8 @@ window.onload = () => {
       let context = canvas.getContext('2d') as CanvasRenderingContext2D;
       let img = new Image();
       img.src = src;
+      img.height = 300;
+      img.width = 300;
       this.img = img;
       this.canvas = canvas;
       this.context = context;
@@ -52,9 +54,9 @@ window.onload = () => {
       this.canvas.addEventListener("mousemove", (event: MouseEvent) => this.Pick(event, document.getElementById("hovered-color") as HTMLElement));
       this.canvas.addEventListener("click", (event: MouseEvent) => this.Pick(event, document.getElementById("selected-color") as HTMLElement));
       this.img.onload = () => {
-        this.canvas.width = this.img.width / 2;
-        this.canvas.height = this.img.height / 2;
-        this.context.drawImage(this.img, 0, 0, this.img.width / 2, this.img.height / 2);
+        this.canvas.width = this.img.width;
+        this.canvas.height = this.img.height;
+        this.context.drawImage(this.img, 0, 0, this.img.width, this.img.height);
       }
     }
   
@@ -72,7 +74,7 @@ window.onload = () => {
     }
 
     public SetOriginal(): void {
-      this.context.drawImage(this.img, 0, 0, this.img.width / 2, this.img.height / 2);
+      this.context.drawImage(this.img, 0, 0, this.img.width, this.img.height);
     }
 
     public Invert(): void {
